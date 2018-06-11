@@ -1,0 +1,25 @@
+POST http://127.0.0.1:4000/api/exercise/new-user HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username=nmtmason
+
+###
+POST http://127.0.0.1:4000/api/exercise/add HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+userId=2&description=running&duration=50&date=2018-06-10
+
+###
+GET http://127.0.0.1:4000/api/exercise/log?userId=2 HTTP/1.1
+
+###
+GET http://127.0.0.1:4000/api/exercise/log?userId=2&limit=1 HTTP/1.1
+
+###
+GET http://127.0.0.1:4000/api/exercise/log?userId=2&from=2018-06-03 HTTP/1.1
+
+###
+GET http://127.0.0.1:4000/api/exercise/log?userId=2&to=2018-06-10 HTTP/1.1
+
+###
+GET http://127.0.0.1:4000/api/exercise/log?userId=2&from=2018-06-01&to=2018-06-03 HTTP/1.1
